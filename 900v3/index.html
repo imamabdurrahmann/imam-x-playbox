@@ -7,8 +7,22 @@
 <script src="rop.js"></script>
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
+<script>
+var uaFull = navigator.userAgent;
+var isPS4 = /PlayStation 4/i.test(uaFull);
+function startPoc() {
+    if (!isPS4) {
+        var p = document.getElementById("progress"); if (p) p.style.display = "none";
+        var m = document.getElementById("menu"); if (m) m.style.display = "block";
+        var msg = document.getElementById("msgs"); if (msg) msg.innerHTML = "PS4 9.00 FW Host v3.0 by Imam x Playbox <span style='font-size:15px;color:#ffd700;'>(Preview PC)</span>";
+    } else {
+        if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+        setTimeout(poc, 50);
+    }
+}
+</script>
 </head>
-<body onload="setTimeout(poc, 50);">
+<body onload="startPoc();">
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
@@ -16,7 +30,10 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <hr>
 <br>
 <div id="progress">
-<h1 id="msgs2" style="font-size: 30px;margin-top: 77px;margin-bottom: 412px;">Loading Jailbreak... Please Wait</h1>
+    <div style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 35px 25px; max-width: 550px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+        <h1 id="msgs2" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading Jailbreak... Please Wait</h1>
+        <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">« Kembali ke Menu</button>
+    </div>
 </div>
 <div id="menu" style="display: none">
 <h1 style="font-size: 18px;color: yellow;">Main Payloads</h1>
@@ -98,10 +115,10 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by Imam x Playbox'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by Imam x Playbox'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by Imam x Playbox'" onclick="load_menu()" style="margin-bottom: 179px"> Return </button>
+<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by Imam x Playbox'" onclick="load_menu()"> Return </button><br><button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px; margin-top: 15px; margin-bottom: 50px;">« Kembali ke Menu Utama</button>
 </div>
 <br>
-<h1 style="margin-top: 22px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
+<h1 style="margin-top: 30px; font-size: 16px;">Designed by: <a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a></h1>
 <script>
 function jbdone(){
 document.getElementById("menu").style.display = "block";
