@@ -1,23 +1,61 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-image: url('img.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #24272b;
+    background-color: #07152b;
     color: white;
     text-align: center;
-    overflow: hidden;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 25px 12px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-size: 25px;
-    color: white;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    font-size: 26px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+h1#msgs {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 5px 0 15px 0;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.4), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.7), transparent);
+    margin: 10px auto 20px;
+    width: 75%;
+    max-width: 600px;
 }
 
 #progress {
@@ -26,66 +64,81 @@ a {
 
 #menu {
     display: block;
+    background: rgba(4, 18, 42, 0.75);
+    border: 1px solid rgba(0, 200, 255, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 25px 20px 30px;
+    max-width: 760px;
+    width: 95%;
+    margin: 10px auto;
 }
 
-#crypto {
-    display: none;
-}
-
-#tools {
-    display: none;
-}
-
-#lnx {
-    display: none;
-}
-
-#mods {
-    display: none;
-}
+#crypto { display: none; }
+#tools { display: none; }
+#lnx { display: none; }
+#mods { display: none; }
 
 .btn {
-    background-color: #003263;
-    color: white;
-    width: 227px;
-    height: 46px;
-    padding-bottom: 5px;
+    background: rgba(12, 35, 75, 0.85);
+    color: #ffffff;
+    width: 225px;
+    height: 48px;
     text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 7px 5px;
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    transition: all 0.25s ease-in-out;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .btn:hover {
-    background-color: #0069d9;
-}
-
-.btn-onln {
-    background-color: #076300;
-}
-
-.btn-onln:hover {
-    background-color: #18891b;
-}
-
-.btn-toolbox {
-    background-color: #ae2301;
-}
-
-.btn-toolbox:hover {
-    background-color: #d42a01;
+    background: rgba(0, 115, 230, 0.95);
+    border-color: #00d2ff;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.6);
+    transform: translateY(-2px);
+    color: #ffffff;
 }
 
 .btn-multi {
-    background-color: #b8860b;
+    background: linear-gradient(135deg, #ffd700, #ff9900) !important;
+    color: #0a1120 !important;
+    font-weight: 800 !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5) !important;
 }
 
 .btn-multi:hover {
-    background-color: #daa520;
+    background: linear-gradient(135deg, #ffe04d, #ffa726) !important;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.85) !important;
+    transform: translateY(-2px);
+}
+
+.btn-onln {
+    background: rgba(16, 75, 45, 0.85);
+    border-color: rgba(0, 255, 128, 0.4);
+}
+
+.btn-onln:hover {
+    background: rgba(22, 130, 75, 0.95);
+    border-color: #00ff80;
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
+}
+
+.btn-toolbox {
+    background: rgba(120, 30, 15, 0.85);
+    border-color: rgba(255, 80, 50, 0.4);
+}
+
+.btn-toolbox:hover {
+    background: rgba(180, 45, 25, 0.95);
+    border-color: #ff5032;
+    box-shadow: 0 0 20px rgba(255, 80, 50, 0.5);
 }

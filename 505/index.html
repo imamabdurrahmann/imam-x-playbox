@@ -29,11 +29,11 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <div id=progress>
     <div style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 35px 25px; max-width: 550px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
         <h1 id=msgs2 style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading... Please Wait</h1>
-        <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">« Kembali ke Menu</button>
+        <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">&laquo; Kembali ke Menu</button>
     </div>
 </div>
 <div id=menu style="display: none">
-<h1 style="font-size: 18px;color: yellow;">Main Payloads</h1>
+<h1 style="font-size: 17px; color: #00e5ff; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 18px 0 10px 0; text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);">Main Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.4b18.12 for 5.05 FW'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_goldhenbeta()"> GoldHEN v2.4b18.12 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.3 for 5.05 FW'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_goldhen23()"> GoldHEN v2.3 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_binloader()"> Bin Loader </button>
@@ -62,7 +62,7 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_fanthreshold()" style="margin-bottom: 70px"> Fan Threshold </button><select id="tempC"></select>°C
 </div>
 <div id=mods>
-<h1 style="font-size: 18px;color: yellow;">Online Payloads</h1>
+<h1 style="font-size: 17px; color: #00e5ff; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 18px 0 10px 0; text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);">Online Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_arabicGuy100()"> Arabic Guy v1.00 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_arabicGuy127()"> Arabic Guy v1.27 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.32 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_arabicGuy132()"> Arabic Guy v1.32 </button>
@@ -80,9 +80,9 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_menu()"> Return </button><br><button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px; margin-top: 15px; margin-bottom: 50px;">« Kembali ke Menu Utama</button>
+<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5 by Imam x Playbox'" onclick="load_menu()"> Return </button><br><button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px; margin-top: 15px; margin-bottom: 50px;">&laquo; Kembali ke Menu Utama</button>
 </div>
-<h1 style="margin-top: 30px; font-size: 16px;">Designed by: <a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a></h1>
+<div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);"><span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <strong style="color: #00e5ff; font-size: 16px; margin: 0 6px;">imamabdurrahman</strong></span></div>
 <script>
 function success(){
 document.getElementById("menu").style.display = "block";
