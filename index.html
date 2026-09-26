@@ -1,30 +1,11 @@
 ﻿<!DOCTYPE html>
 <html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PS4 Exploit Host by Imam x Playbox</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script>
-var histlength=history.length;history.go(-histlength 2);
-
-document.addEventListener("DOMContentLoaded", function() {
-    var ua = navigator.userAgent;
-    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
-    var devText = document.getElementById("detected-text");
-    var devBox = document.getElementById("device-info");
-    
-    if (match) {
-        var fw = match[1];
-        devText.innerHTML = "🎮 Console Detected: PlayStation 4 (Firmware " + fw + ")";
-        devText.style.color = "#00ffcc";
-        devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
-    } else {
-        devText.innerHTML = "💻 Device Detected: PC / Laptop (Preview Mode)";
-        devText.style.color = "#ffd700";
-        devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
-    }
-});
-</script>
 <h1 id=msgs>PS4 Exploit Host by Imam x Playbox</h1>
 <hr>
 <div id="device-info" style="display: inline-block; background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 215, 0, 0.35); border-radius: 20px; padding: 7px 22px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); backdrop-filter: blur(5px);">
@@ -45,5 +26,28 @@ document.addEventListener("DOMContentLoaded", function() {
 <br>
 <h1 style="margin-top: 50px;">Designed by:<a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a>A special thanks to all the devs on the scene.</h1>
 </div>
+<script>
+function detectDevice() {
+    var ua = navigator.userAgent;
+    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    
+    if (devText && devBox) {
+        if (match) {
+            var fw = match[1];
+            devText.innerHTML = "&#127918; Console Detected: PlayStation 4 (Firmware " + fw + ")";
+            devText.style.color = "#00ffcc";
+            devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+        } else {
+            devText.innerHTML = "&#128187; Device Detected: PC / Laptop (Preview Mode)";
+            devText.style.color = "#ffd700";
+            devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+        }
+    }
+}
+detectDevice();
+document.addEventListener("DOMContentLoaded", detectDevice);
+</script>
 </body>
 </html>
