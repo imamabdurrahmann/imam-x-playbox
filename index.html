@@ -1,26 +1,47 @@
 ﻿<!DOCTYPE html>
 <html><head>
-<title>PS4  Exploit Host by Imam x Playbox</title>
+<title>PS4 Exploit Host by Imam x Playbox</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <script>
 var histlength=history.length;history.go(-histlength 2);
+
+document.addEventListener("DOMContentLoaded", function() {
+    var ua = navigator.userAgent;
+    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    
+    if (match) {
+        var fw = match[1];
+        devText.innerHTML = "🎮 Console Detected: PlayStation 4 (Firmware " + fw + ")";
+        devText.style.color = "#00ffcc";
+        devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+    } else {
+        devText.innerHTML = "💻 Device Detected: PC / Laptop (Preview Mode)";
+        devText.style.color = "#ffd700";
+        devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+    }
+});
 </script>
-<h1 id=msgs>PS4  Exploit Host by Imam x Playbox</h1>
+<h1 id=msgs>PS4 Exploit Host by Imam x Playbox</h1>
 <hr>
+<div id="device-info" style="display: inline-block; background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 215, 0, 0.35); border-radius: 20px; padding: 7px 22px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); backdrop-filter: blur(5px);">
+    <span id="detected-text" style="color: #ffd700; font-weight: 600;">Detecting device...</span>
+</div>
 <br>
 <div id=menu>
 <h1 style="font-size: 18px;color: yellow;">Select Your Firmware</h1>
-<button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'" onclick="location.href='g2all/index.html'"> GoldHEN Multi FW </button>
-<button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'" onclick="location.href='505/index.html'"> 5.05 FW v2.5 </button>
-<a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'"> 6.72 FW GoldHEN </button></a>
-<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'"> 6.72 FW v3.0 </button></a>
+<button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'" onclick="location.href='g2all/index.html'"> GoldHEN Multi FW </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'" onclick="location.href='505/index.html'"> 5.05 FW v2.5 </button>
+<a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'"> 6.72 FW GoldHEN </button></a>
+<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'"> 6.72 FW v3.0 </button></a>
 <br>
-<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'"> 9.00 FW GoldHEN </button></a>
-<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'"> 9.00 FW v3.0 </button></a>
+<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'"> 9.00 FW GoldHEN </button></a>
+<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'"> 9.00 FW v3.0 </button></a>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4  Exploit Host by Imam x Playbox'" onclick="location.href='restore/index.html'"> Restore Host </button>
+<button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Exploit Host by Imam x Playbox'" onclick="location.href='restore/index.html'"> Restore Host </button>
 <br>
 <h1 style="margin-top: 50px;">Designed by:<a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a>A special thanks to all the devs on the scene.</h1>
 </div>
