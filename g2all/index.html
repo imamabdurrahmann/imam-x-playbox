@@ -19,6 +19,7 @@ function onScriptError() {
 if (!isPS4) {
     document.addEventListener("DOMContentLoaded", () => {
         msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
+        msgs.style.color = "#ff6b6b";
     });
 } else {
     if (window.applicationCache.status == '0') {
@@ -96,7 +97,10 @@ if (!isPS4) {
 <h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by Imam x Playbox</h1>
 <hr>
 <br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-<h1 style="margin-top: 43px;">Designed by: <a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a></h1>
+<div style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 35px 25px; max-width: 550px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <h1 id="msgs" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
+    <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">« Kembali ke Menu</button>
+</div>
+<h1 style="margin-top: 30px; font-size: 16px;">Designed by: <a href="#" style="color: #f31414;margin-left: 10px;margin-right: 10px;">imamabdurrahman</a></h1>
 </body>
 </html>
