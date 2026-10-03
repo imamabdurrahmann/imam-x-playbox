@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>Playbox Bengkulu - PS4 5.05 FW Host v2.5</title>
+<title>PS4 5.05 FW Host v2.5</title>
 <link rel="stylesheet" href="../style.css">
 <script src="exploit.js"></script>
 <script>
@@ -11,7 +11,7 @@ function startExploit() {
     if (!isPS4) {
         var p = document.getElementById("progress"); if (p) p.style.display = "none";
         var m = document.getElementById("menu"); if (m) m.style.display = "block";
-        var msg = document.getElementById("msgs"); if (msg) msg.innerHTML = "Playbox Bengkulu - PS4 5.05 FW Host v2.5 <span style='font-size:15px;color:#ffd700;'>(Preview PC)</span>";
+        var msg = document.getElementById("msgs"); if (msg) msg.innerHTML = "PS4 5.05 FW Host v2.5 <span style='font-size:15px;color:#ffd700;'>(Preview PC)</span>";
     } else {
         if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
         setTimeout(exploit, 50);
@@ -23,13 +23,7 @@ function startExploit() {
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
-<h1 class="brand-title">Playbox Bengkulu GoldHen PS4</h1>
-<div>
-    <a href="https://wa.me/628217277220" target="_blank" class="wa-badge">
-        WhatsApp: 0821-7277-220
-    </a>
-</div>
-<div id="msgs" class="fw-title">PS4 5.05 FW Host v2.5</div>
+<h1 id="msgs">PS4 5.05 FW Host v2.5</h1>
 <hr>
 <div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
     <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
@@ -91,7 +85,7 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <br>
 <button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onclick="load_menu()"> Return </button><br><button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px; margin-top: 15px; margin-bottom: 50px;">&laquo; Kembali ke Menu Utama</button>
 </div>
-<div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);"><span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <a href="https://instagram.com/imamabdurrahmannn" target="_blank" style="color: #00e5ff; font-size: 16px; margin: 0 6px; text-decoration: none; font-weight: 700;">IG: imamabdurrahmannn</a></span></div>
+<div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);"><span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <span style="color: #00e5ff; font-size: 16px; margin: 0 6px; font-weight: 700;">M Imam Abdurrahman</span></span></div>
 <script>
 function success(){
 document.getElementById("menu").style.display = "block";
