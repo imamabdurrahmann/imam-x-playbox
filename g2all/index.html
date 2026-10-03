@@ -1,10 +1,40 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Playbox Bengkulu - PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<h1 class="brand-title">Playbox Bengkulu GoldHen PS4</h1>
+<div>
+    <a href="https://wa.me/628217277220" target="_blank" class="wa-badge">
+        WhatsApp: 0821-7277-220
+    </a>
+</div>
+<div class="fw-title">[5.05] 7.00 - 13.52 FW GoldHEN Host</div>
+<hr>
+
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
+<br>
+
+<div id="menu">
+    <div style="padding: 15px 10px;">
+        <h1 id="msgs" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
+        <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">&laquo; Kembali ke Menu</button>
+    </div>
+</div>
+
+<div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);">
+    <span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <a href="https://instagram.com/imamabdurrahmannn" target="_blank" style="color: #00e5ff; font-size: 16px; margin: 0 6px; text-decoration: none; font-weight: 700;">IG: imamabdurrahmannn</a></span>
+</div>
+
 <script>
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
@@ -12,15 +42,34 @@ var isPS4 = match !== null;
 var fwVersion = isPS4 ? match[1] : "Unknown";
 var fwNum = parseFloat(fwVersion);
 
+function detectDevice() {
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    if (devText && devBox) {
+        if (isPS4) {
+            devText.innerHTML = "&#127918; Console Detected: PlayStation 4 (Firmware " + fwVersion + ")";
+            devText.style.color = "#00ffcc";
+            devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+        } else {
+            devText.innerHTML = "&#128187; Device Detected: PC / Laptop (Preview Mode)";
+            devText.style.color = "#ffd700";
+            devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+        }
+    }
+}
+detectDevice();
+
 function onScriptError() {
-    msgs.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
+    var m = document.getElementById("msgs");
+    if (m) m.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
 }
 
 if (!isPS4) {
-    document.addEventListener("DOMContentLoaded", () => {
-        msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
-        msgs.style.color = "#ff6b6b";
-    });
+    var m = document.getElementById("msgs");
+    if (m) {
+        m.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
+        m.style.color = "#ff6b6b";
+    }
 } else {
     if (window.applicationCache.status == '0') {
         if (fwNum == 5.05 || fwNum == 5.07) {
@@ -34,9 +83,8 @@ if (!isPS4) {
         } else if (fwNum >= 11.50 && fwNum <= 13.52) {
             window.location.replace("cacheslopkit.html");
         } else {
-            document.addEventListener("DOMContentLoaded", () => {
-                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
-            });
+            var m = document.getElementById("msgs");
+            if (m) m.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
         }
     } else {
         if (fwNum == 5.05 || fwNum == 5.07) {
@@ -94,19 +142,5 @@ if (!isPS4) {
     }
 }
 </script>
-<h1 class="brand-title">Playbox Bengkulu GoldHen PS4</h1>
-<div>
-    <a href="https://wa.me/628217277220" target="_blank" class="wa-badge">
-        WhatsApp: 0821-7277-220
-    </a>
-</div>
-<div class="fw-title">[5.05] 7.00 - 13.52 FW GoldHEN Host</div>
-<hr>
-<br>
-<div style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 35px 25px; max-width: 550px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
-    <h1 id="msgs" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-    <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">&laquo; Kembali ke Menu</button>
-</div>
-<div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);"><span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <a href="https://instagram.com/imamabdurrahmannn" target="_blank" style="color: #00e5ff; font-size: 16px; margin: 0 6px; text-decoration: none; font-weight: 700;">IG: imamabdurrahmannn</a></span></div>
 </body>
 </html>

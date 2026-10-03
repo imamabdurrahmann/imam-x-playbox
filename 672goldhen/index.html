@@ -22,9 +22,15 @@ var leaker_obj={a:0};var leaker_arr=new Uint32Array(6);var oob_slave=new Uint8Ar
 <div class="fw-title"><span style="color: #00ff88; font-weight: 600; font-size: 19px;">Pass = <span id="passCounter"></span>&nbsp;&nbsp;&nbsp;&nbsp;</span>PS4 6.72 FW GoldHEN Host<span style="color: #ff5252; font-weight: 600; font-size: 19px;">&nbsp;&nbsp;&nbsp;&nbsp;Fail = <span id="failCounter"></span></span></div>
 <hr>
 <br>
-<div style="background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 35px 25px; max-width: 550px; margin: 40px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
-    <h1 id="msgs" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-    <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">&laquo; Kembali ke Menu</button>
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
+<br>
+<div id="menu">
+    <div style="padding: 15px 10px;">
+        <h1 id="msgs" style="font-size: 24px; color: #ffd700; margin: 0 0 25px 0;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
+        <button class="btn" onclick="location.href='../index.html'" style="width: 250px; font-weight: bold; background: linear-gradient(145deg, #1a3a5c, #003263); border-radius: 8px;">&laquo; Kembali ke Menu</button>
+    </div>
 </div>
 <div style="margin-top: 25px; display: inline-block; background: rgba(3, 14, 34, 0.85); border: 1px solid rgba(0, 200, 255, 0.25); border-radius: 30px; padding: 10px 28px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);"><span style="font-size: 15px; color: #e2e8f0; letter-spacing: 0.5px;">Designed by: <a href="https://instagram.com/imamabdurrahmannn" target="_blank" style="color: #00e5ff; font-size: 16px; margin: 0 6px; text-decoration: none; font-weight: 700;">IG: imamabdurrahmannn</a></span></div>
 <script>
@@ -38,6 +44,27 @@ LoadedMSG="GoldHEN v2.4b18.12 Loaded ...";
 PLfile="goldhen_2.4b18.12.bin";
 setTimeout(jailbreak, 500);
 }
+</script>
+<script>
+function detectDevice() {
+    var ua = navigator.userAgent;
+    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    if (devText && devBox) {
+        if (match) {
+            devText.innerHTML = "&#127918; Console Detected: PlayStation 4 (Firmware " + match[1] + ")";
+            devText.style.color = "#00ffcc";
+            devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+        } else {
+            devText.innerHTML = "&#128187; Device Detected: PC / Laptop (Preview Mode)";
+            devText.style.color = "#ffd700";
+            devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+        }
+    }
+}
+detectDevice();
+document.addEventListener("DOMContentLoaded", detectDevice);
 </script>
 </body>
 </html>

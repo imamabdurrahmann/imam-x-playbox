@@ -40,6 +40,9 @@ else {
 </div>
 <div id="msgs" class="fw-title">PS4 6.72 FW Host v3.0</div>
 <hr>
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
 <br>
 <h1 style="font-size: 18px;"><span style="color: #00ff88; font-weight: 600;">Pass = <span id="passCounter"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00e5ff; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 12px rgba(0,229,255,0.6);">Main Payloads</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff5252; font-weight: 600;">Fail = <span id="failCounter"></span></h1>
 <button class="btn" onclick="load_goldhen()"> GoldHEN v2.4b18.12 </button>
@@ -82,6 +85,9 @@ else {
 <div id="tools">
 <h1 id="msgs2">Backup and Restore </h1>
 <hr>
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
 <br>
 <h1 style="font-size: 17px; color: #00e5ff; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 18px 0 10px 0; text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);">Payloads</h1>
 <button class="btn" onclick="load_DBbackup()"> DB Backup </button>
@@ -104,6 +110,9 @@ else {
 <div id="mods">
 <h1 id="msgs3">Games Mods </h1>
 <hr>
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
 <br>
 <h1 style="font-size:18px;">Payloads</h1>
 <button class="btn" onclick="load_ArabicGuy100()">  Arabic Guy 1.00 </button>
@@ -486,6 +495,27 @@ LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;
 PLfile="pl_FanThresh.js";
 loadScript1();
 }
+</script>
+<script>
+function detectDevice() {
+    var ua = navigator.userAgent;
+    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    if (devText && devBox) {
+        if (match) {
+            devText.innerHTML = "&#127918; Console Detected: PlayStation 4 (Firmware " + match[1] + ")";
+            devText.style.color = "#00ffcc";
+            devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+        } else {
+            devText.innerHTML = "&#128187; Device Detected: PC / Laptop (Preview Mode)";
+            devText.style.color = "#ffd700";
+            devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+        }
+    }
+}
+detectDevice();
+document.addEventListener("DOMContentLoaded", detectDevice);
 </script>
 </body>
 </html>
